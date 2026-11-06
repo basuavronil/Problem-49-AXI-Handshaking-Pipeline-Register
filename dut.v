@@ -12,7 +12,6 @@ module axi_handshake_reg (
     output wire        m_valid, 
     input  wire        m_ready  
 );
-
     // Internal Registers
     reg [31:0] data_reg;
     reg        valid_reg;
