@@ -40,5 +40,4 @@ module axi_handshake_reg (
             end
         end
     end
-
 endmodule
