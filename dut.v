@@ -6,7 +6,7 @@ module axi_handshake_reg (
     input  wire [31:0] s_data,   
     input  wire        s_valid,         
     output wire        s_ready,           
- 
+  
     // Right Side: Connects to External Slave (Module acts as Master)
     output wire [31:0] m_data,
     output wire        m_valid, 
