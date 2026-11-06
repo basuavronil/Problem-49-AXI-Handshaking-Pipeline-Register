@@ -1,6 +1,6 @@
 module axi_handshake_reg (
     input  wire        clk, 
-    input  wire        rst_n,  
+    input  wire        rst_n,   
       
     // Left Side: Connects to External Master (Module acts as Slave)
     input  wire [31:0] s_data,   
