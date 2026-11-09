@@ -1,7 +1,6 @@
 `timescale 1ns / 1ps
     
 module tb_axi_handshake_reg;
-
     // Clock and Reset
     reg        clk;
     reg        rst_n;
