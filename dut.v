@@ -10,7 +10,7 @@ module axi_handshake_reg (
     // Right Side: Connects to External Slave (Module acts as Master)  
     output wire [31:0] m_data, 
     output wire        m_valid,    
-    input  wire        m_ready    
+    input  wire        m_ready       
 );
     // Internal Registers
     reg [31:0] data_reg;
