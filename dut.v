@@ -14,7 +14,7 @@ module axi_handshake_reg (
 );
     // Internal Registers
     reg [31:0] data_reg;
-    reg        valid_reg;
+    reg        valid_reg;    
 
     // Ready Signal Logic
     assign s_ready = m_ready | (~valid_reg);
