@@ -26,7 +26,7 @@ module axi_handshake_reg (
     // Sequential Logic Block
     always @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
-            valid_reg <= 1'b0;
+            valid_reg <= 1'b0;    
             data_reg  <= 32'h0;
         end else begin
             // Check if the module is ready to accept a new state
