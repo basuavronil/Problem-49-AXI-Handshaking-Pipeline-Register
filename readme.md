@@ -1,5 +1,16 @@
 # AXI / Valid-Ready Handshake Timing: Forward Register Slice vs. Skid Buffer
 
+## #1. Forward vs. Backpressure Control Signals
+
+* **Forward Scenario (`m_valid` / `out_valid`) — Sequential in BOTH:**
+  * **Forward Register Slice:** **Sequential** $\rightarrow$ `assign m_valid = valid_reg;` (FF-to-FF)
+  * **Skid Buffer:** **Sequential** $\rightarrow$ `assign m_valid = main_valid;` (FF-to-FF)
+
+* **Backpressure Scenario (`s_ready` / `in_ready`) — Only Skid Buffer is Sequential:**
+  * **Forward Register Slice (Pipeline):** **Combinational** $\rightarrow$ `assign s_ready = m_ready | (~valid_reg);`
+  * **Skid Buffer:** **Sequential** $\rightarrow$ `assign s_ready = ~skid_valid;`
+
+    
 ## 1. Overview & Problem Statement
 
 In high-frequency `valid`/`ready`/`data` interfaces (such as AXI-Stream or AXI channels), inserting a **Forward Register Slice** is a common technique to pipeline the forward path (`valid` and `data`). However, a forward register slice leaves the **backward path (`ready`) purely combinational**—meaning there is no register-to-register boundary in the backward direction.
