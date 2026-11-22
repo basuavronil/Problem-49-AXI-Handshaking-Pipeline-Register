@@ -1,7 +1,7 @@
 # AXI / Valid-Ready Handshake Timing: Forward Register Slice vs. Skid Buffer
          
 ## #1. Forward vs. Backpressure Control Signals    
-      
+          
 * **Forward Scenario (`m_valid` / `out_valid`) — Sequential in BOTH:**
   * **Forward Register Slice:** **Sequential** $\rightarrow$ `assign m_valid = valid_reg;` (FF-to-FF)
   * **Skid Buffer:** **Sequential** $\rightarrow$ `assign m_valid = main_valid;` (FF-to-FF)
