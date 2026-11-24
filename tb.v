@@ -2,7 +2,7 @@
 module tb_axi_handshake_reg;
     // Clock and Reset
     reg        clk;
-    reg        rst_n;
+    reg        rst_n;  
     
     // Interface with External Master (Slave Port on DUT)
     reg  [31:0] s_data;
