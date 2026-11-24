@@ -7,7 +7,7 @@ module tb_axi_handshake_reg;
     // Interface with External Master (Slave Port on DUT)
     reg  [31:0] s_data;
     reg         s_valid;
-    wire        s_ready;
+    wire        s_ready;  
  
     // Interface with External Slave (Master Port on DUT)
     wire [31:0] m_data;
